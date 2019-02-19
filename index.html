@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>app</title>
+  <script>
+    (function(doc, win){
+      var docEl = document.documentElement;
+      var resEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+      var resCalc = function(){
+        var cliW = docEl.clientWidth;
+        if(!cliW) return;
+        docEl.style.fontSize = (cliW * 16) / 375 + 'px';
+      };
+      if(doc.addEventListener) return;
+      win.addEventListener(resEvt, resCalc, false);
+      doc.addEventListener('DOMContentLoaded', resCalc, false);
+      resCalc();
+    })(document, window);
+  </script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>
