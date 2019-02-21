@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-tabbar v-model="active" @change="change()" class="bt-1px-6">
+    <van-tabbar v-model="active" @change="change()" class="menus">
       <van-tabbar-item :icon="active==0?'gem':'gem-o'">首页</van-tabbar-item>
       <van-tabbar-item :icon="active==1?'shopping-cart':'shopping-cart-o'">理财</van-tabbar-item>
       <van-tabbar-item :icon="active==2?'goods-collect':'goods-collect-o'">贷款</van-tabbar-item>
@@ -43,7 +43,8 @@
 </script>
 
 <style scoped>
-.bt-1px-6{
-  border-top:1px #666 solid;
+.menus{
+  background: #fff;
+  border-top:2px #333 solid;
 }
 </style>

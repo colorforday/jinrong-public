@@ -11,56 +11,14 @@
       <Swiper :list="imgLists" class="bg-white mb10 pt10 pb10"></Swiper>
       <!--理财推荐-->
       <LicaiBox :info="licaiInfo" class="bg-white mb10"></LicaiBox>
-
-      <div class="bg-white mb10">
-        <h5 class="title">贷款推荐</h5>
-        <ul class="licai">
-          <li>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
+      <!--理财推荐-->
+      <div v-for="(item,index) in comLists" :key="index">
+        <ComBox :info="item" class="bg-white mb10"></ComBox>
       </div>
+      <!---->
+      <NewsBox :info="newsInfo" class="bg-white mb60"></NewsBox>
 
-      <div class="bg-white mb10">
-        <h5 class="title">保险推荐</h5>
-        <ul class="licai">
-          <li>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-        <div class="more">查看更多</div>
-      </div>
 
-      <div class="bg-white mb10">
-        <h5 class="title">小米信用卡推荐</h5>
-        <ul class="licai">
-          <li>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-white mb60">
-        <h5 class="title">金融学堂</h5>
-        <ul class="licai">
-          <li>
-            <div>image</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-      </div>
 
     </van-pull-refresh>
 
@@ -76,6 +34,8 @@
   import Nav from '../components/navbar';
   import Swiper from '../components/swiper';
   import LicaiBox from '../components/licaiBox';
+  import ComBox from '../components/comBox';
+  import NewsBox from '../components/newsBox';
   import Menus from '../components/menus';
 
   export default {
@@ -93,6 +53,8 @@
       Swiper,
       Menus,
       LicaiBox,
+      ComBox,
+      NewsBox,
     },
     data() {
       return {
@@ -111,21 +73,63 @@
         licaiInfo: {
           title: '理财推荐',
           more: true,
-          limit:2,
+          limit: 2,
           list: [
-            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
-            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
-            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
-            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
-            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
           ]
         },
+        comLists: [
+          {
+            title: '贷款推荐',
+            more: false,
+            limit: 1,
+            list: [
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+            ]
+          },
+          {
+            title: '保险推荐',
+            more: true,
+            limit: 3,
+            list: [
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+            ]
+          },
+          {
+            title: '小米信用卡推荐',
+            more: false,
+            limit: 1,
+            list: [
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+              {headText: '随心存399天', desc: '银行产品本金保障'},
+            ]
+          },
+        ],
         imgLists: [
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
         ],
+        newsInfo: {
+          title: '金融学堂',
+          more: false,
+          limit: 5,
+          list: [
+            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+          ]
+        },
         count: 0,
         isLoading: false
       }
