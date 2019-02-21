@@ -21,7 +21,8 @@
   .nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     background: #fff;
   }

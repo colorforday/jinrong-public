@@ -9,77 +9,12 @@
       <Nav :info="navInfo" class="mb10"></Nav>
       <!--轮播-->
       <Swiper :list="imgLists" class="bg-white mb10 pt10 pb10"></Swiper>
-
-      <div class="bg-white mb10">
-        <h5 class="title">热门推荐</h5>
-        <ul class="licai">
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
+      <!--理财推荐-->
+      <div v-for="(item,index) in licaiLists" :key="index">
+        <LicaiBox :info="item" class="bg-white mb10"></LicaiBox>
       </div>
-
-      <div class="bg-white mb10">
-        <h5 class="title">定期</h5>
-        <ul class="licai">
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-        <div class="more">查看更多</div>
-      </div>
-
-      <div class="bg-white mb10">
-        <h5 class="title">活期</h5>
-        <ul class="licai">
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-        <div class="more">查看更多</div>
-      </div>
-
-      <div class="bg-white mb10">
-        <h5 class="title">基金</h5>
-        <ul class="licai">
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-          <li>
-            <div>4.10%</div>
-            <div>富民宝</div>
-            <div>&gt;</div>
-          </li>
-        </ul>
-        <div class="more">查看更多</div>
-      </div>
-
-      <div class="bg-white mb60">
-        <h5 class="title">股票</h5>
-      </div>
+      <!--股票-->
+      <van-cell title="股票" is-link class="mb60"/>
 
     </van-pull-refresh>
 
@@ -89,11 +24,12 @@
 </template>
 
 <script>
-  import {NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, PullRefresh} from 'vant';
+  import {NavBar, Swipe, SwipeItem, Tabbar, TabbarItem, PullRefresh, Cell, CellGroup} from 'vant';
   import TopHeader from '../../components/topHeader';
   import FocusShow from '../../components/focusShow';
   import Nav from '../../components/navbar';
   import Swiper from '../../components/swiper';
+  import LicaiBox from '../../components/licaiBox';
   import Menus from '../../components/menus';
 
   export default {
@@ -105,10 +41,13 @@
       [Tabbar.name]: Tabbar,
       [TabbarItem.name]: TabbarItem,
       [PullRefresh.name]: PullRefresh,
+      [Cell.name]: Cell,
+      [CellGroup.name]: CellGroup,
       TopHeader,
       FocusShow,
       Nav,
       Swiper,
+      LicaiBox,
       Menus,
     },
     data() {
@@ -124,6 +63,53 @@
           {name: '活期', icon: '', path: ''},
           {name: '基金', icon: '', path: ''},
           {name: '银行精选', icon: '', path: ''}
+        ],
+        licaiLists: [
+          {
+            title: '热门推荐',
+            more: false,
+            limit: 2,
+            list: [
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'}
+            ]
+          }, {
+            title: '定期',
+            more: true,
+            limit: 2,
+            list: [
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'}
+            ]
+          }, {
+            title: '活期',
+            more: true,
+            limit: 2,
+            list: [
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'}
+            ]
+          }, {
+            title: '基金',
+            more: true,
+            limit: 2,
+            list: [
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
+              {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'}
+            ]
+          }
         ],
         imgLists: [
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',

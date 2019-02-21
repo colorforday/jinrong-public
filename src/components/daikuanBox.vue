@@ -4,8 +4,11 @@
       <h5 class="title">{{info.title}}</h5>
       <ul class="list">
         <li v-for="(item,index) in info.list" :key="index" v-if="index<info.limit">
-          <div>{{item.percent}}</div>
-          <div>{{item.headText}}</div>
+          <div class="pic"></div>
+          <div class="main">
+            <h4>{{item.headText}}</h4>
+            <p>原价: 2,699.00元 | 12期*<span class="org">224.9元</span></p>
+          </div>
           <div>&gt;</div>
         </li>
       </ul>
@@ -39,6 +42,28 @@
     height: 80px;
     border-bottom: 1px #ccc solid;
     padding: 0 10px;
+  }
+
+  .list li .pic{
+    width:50px;
+    height:50px;
+    background: #ccc;
+  }
+
+  .list li .main{
+    flex:1;
+    margin-left:20px;
+  }
+  .list li .main h4{
+    font-size: 18px;
+  }
+  .list li .main p{
+    font-size: 14px;
+    color:#999;
+    margin-top:12px;
+  }
+  .list li .main p span.org{
+    color:#ff8400;
   }
 
   .more {

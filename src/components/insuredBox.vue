@@ -4,8 +4,12 @@
       <h5 class="title">{{info.title}}</h5>
       <ul class="list">
         <li v-for="(item,index) in info.list" :key="index" v-if="index<info.limit">
-          <div>{{item.percent}}</div>
-          <div>{{item.headText}}</div>
+          <div class="pic"></div>
+          <div class="main">
+            <h4>{{item.headText}}</h4>
+            <p>{{item.desc}}</p>
+            <p><span class="org fb f18">{{item.cash}}</span>{{item.unit}}</p>
+          </div>
           <div>&gt;</div>
         </li>
       </ul>
@@ -36,9 +40,30 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
     border-bottom: 1px #ccc solid;
-    padding: 0 10px;
+    padding: 20px 10px;
+  }
+
+  .list li .pic{
+    width:130px;
+    height:80px;
+    background: #ccc;
+  }
+
+  .list li .main{
+    flex:1;
+    margin-left:20px;
+  }
+  .list li .main h4{
+    font-size: 18px;
+  }
+  .list li .main p{
+    font-size: 14px;
+    color:#999;
+    margin-top:12px;
+  }
+  .list li .main p span.org{
+    color:#ff8400;
   }
 
   .more {

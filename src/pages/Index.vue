@@ -10,7 +10,7 @@
       <!--轮播-->
       <Swiper :list="imgLists" class="bg-white mb10 pt10 pb10"></Swiper>
       <!--理财推荐-->
-      <LicaiBox class="bg-white mb10"></LicaiBox>
+      <LicaiBox :info="licaiInfo" class="bg-white mb10"></LicaiBox>
 
       <div class="bg-white mb10">
         <h5 class="title">贷款推荐</h5>
@@ -108,6 +108,18 @@
           {name: '小米分期', icon: '', path: ''},
           {name: '客服咨询', icon: '', path: ''}
         ],
+        licaiInfo: {
+          title: '理财推荐',
+          more: true,
+          limit:2,
+          list: [
+            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+            {percent:'4.8%', headText:'随心存399天', desc:'银行产品本金保障'},
+          ]
+        },
         imgLists: [
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
           'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
