@@ -123,11 +123,11 @@
           more: false,
           limit: 5,
           list: [
-            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-            {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:54},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:55},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:56},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:57},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:58},
           ]
         },
         count: 0,

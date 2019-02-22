@@ -3,7 +3,7 @@
     <div>
       <h5 class="title">{{info.title}}</h5>
       <ul class="list">
-        <li v-for="(item,index) in info.list" :key="index" v-if="index<info.limit">
+        <li v-for="(item,index) in info.list" :key="index" @click="toNews(item)" v-if="index<info.limit">
           <div class="pic"></div>
           <div class="main">
             <h4>{{item.headText}}</h4>
@@ -22,6 +22,19 @@
     name: "newsBox",
     props: {
       info: {},
+    },
+    data() {
+      return {
+        //
+      }
+    },
+    methods: {
+      toNews(item) {
+        this.$router.push({
+          name:'news',
+          params: item
+        });
+      },
     },
   }
 </script>
