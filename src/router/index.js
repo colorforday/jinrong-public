@@ -5,6 +5,7 @@ import Index from '@/pages/Index'
 import Licai from '@/pages/licai/index'
 import Daikuan from '@/pages/daikuan/index'
 import Baoxian from '@/pages/baoxian/index'
+import News from '@/pages/news'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ export default new Router({
       path: '/baoxian',
       name: 'baoxian',
       component: Baoxian
+    }, {
+      path: '/news',
+      name: 'news',
+      component: News
     }
   ]
 })

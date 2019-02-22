@@ -16,7 +16,7 @@
         <InsuredBox :info="item" class="bg-white mb10"></InsuredBox>
       </div>
 
-      <van-cell title="单元格" is-link size="large" label="描述信息" />
+      <van-cell title="单元格" is-link size="large" label="描述信息"/>
 
       <div class="mb60"></div>
 
@@ -78,66 +78,66 @@
             more: false,
             limit: 3,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           }, {
             title: '车险',
             more: false,
             limit: 1,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: '立即报价', unit:''},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: '立即报价', unit: ''},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           }, {
             title: '健康险',
             more: true,
             limit: 2,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           }, {
             title: '意外险',
             more: true,
             limit: 2,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           }, {
             title: '手机险',
             more: true,
             limit: 1,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           }, {
             title: '旅行险',
             more: true,
             limit: 2,
             list: [
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
-              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
+              {url: '', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起'},
             ]
           },
         ],
