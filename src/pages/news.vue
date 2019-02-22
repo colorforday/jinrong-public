@@ -60,8 +60,9 @@
       //   console.log(err);
       // })
 
-      this.$axios.get("../static/data/getnews1.json").then(res => {
-        console.log(res.code);
+      this.$axios.get("../../static/data/getNews.json").then(res => {
+        console.log(111);
+        console.log(res.data.code);
       });
 
 
