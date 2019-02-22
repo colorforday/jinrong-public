@@ -15,10 +15,8 @@
       <div v-for="(item,index) in comLists" :key="index">
         <ComBox :info="item" class="bg-white mb10"></ComBox>
       </div>
-      <!---->
+      <!--新闻列表-->
       <NewsBox :info="newsInfo" class="bg-white mb60"></NewsBox>
-
-
 
     </van-pull-refresh>
 
