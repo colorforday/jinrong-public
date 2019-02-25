@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar :title="title" class="tt">
+    <van-nav-bar @click-left="$router.back()" :title="title" class="tt">
       <!--左功能-->
       <van-icon v-if="ltype=='back'" name="arrow-left" size="20px" color="#666" slot="left"/>
       <van-icon v-if="ltype=='user'" name="user-o" size="20px" color="#666" slot="left"/>
@@ -25,6 +25,9 @@
       ltype: '',
       rtype: '',
       name: '',
+    },
+    methods: {
+      //
     },
   }
 </script>

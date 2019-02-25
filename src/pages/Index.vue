@@ -13,7 +13,7 @@
       <LicaiBox :info="licaiInfo" class="bg-white mb10"></LicaiBox>
       <!--理财推荐-->
       <div v-for="(item,index) in comLists" :key="index">
-        <ComBox :info="item" class="bg-white mb10"></ComBox>
+        <ComBox :info="item" @click="toComp(item)" class="bg-white mb10"></ComBox>
       </div>
       <!--新闻列表-->
       <NewsBox :info="newsInfo" class="bg-white mb60"></NewsBox>
@@ -86,8 +86,7 @@
             more: false,
             limit: 1,
             list: [
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-              {headText: '随心存399天', desc: '银行产品本金保障'},
+              {headText: '随心存399天', desc: '银行产品本金保障', url: '/daikuan'},
             ]
           },
           {
@@ -121,11 +120,11 @@
           more: false,
           limit: 5,
           list: [
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:54},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:55},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:56},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:57},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit:'元/月起', newsId:58},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 54},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 55},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 56},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 57},
+            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 58},
           ]
         },
         count: 0,
@@ -141,6 +140,7 @@
           console.log(this.count);
         }, 500);
       },
+
     },
   }
 </script>

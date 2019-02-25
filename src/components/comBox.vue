@@ -3,7 +3,7 @@
     <div>
       <h5 class="title">{{info.title}}</h5>
       <ul class="list">
-        <li v-for="(item,index) in info.list" :key="index" v-if="index<info.limit">
+        <li @click="toComPage(item)" v-for="(item,index) in info.list" :key="index" v-if="index<info.limit">
           <div class="main">
             <h4 class="org">{{item.headText}}</h4>
             <p>{{item.desc}}</p>
@@ -21,6 +21,12 @@
     name: "comBox",
     props: {
       info: {},
+    },
+    methods: {
+      toComPage(item) {
+        if(!item.url) return;
+        this.$router.push(item.url);
+      },
     },
   }
 </script>

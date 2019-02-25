@@ -10,6 +10,13 @@ import News from '@/pages/news'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior(to, from, savePosition) {
+    if (savePosition) {
+      return savePosition
+    } else {
+      return {x: 0, y: 0}
+    }
+  },
   routes: [
     {
       path: '/',
