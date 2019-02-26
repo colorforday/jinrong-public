@@ -62,74 +62,17 @@
           rtype: 'gift',
         },
         focusInfo: '首页展示',
-        navInfo: [
-          {name: '银行精选', icon: '', path: ''},
-          {name: '免费保险', icon: '', path: ''},
-          {name: '小米分期', icon: '', path: ''},
-          {name: '客服咨询', icon: '', path: ''}
-        ],
-        licaiInfo: {
-          title: '理财推荐',
-          more: true,
-          limit: 2,
-          list: [
-            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
-            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
-            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
-            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
-            {percent: '4.8%', headText: '随心存399天', desc: '银行产品本金保障'},
-          ]
-        },
-        comLists: [
-          {
-            title: '贷款推荐',
-            more: false,
-            limit: 1,
-            list: [
-              {headText: '随心存399天', desc: '银行产品本金保障', url: '/daikuan'},
-            ]
-          },
-          {
-            title: '保险推荐',
-            more: true,
-            limit: 3,
-            list: [
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-            ]
-          },
-          {
-            title: '小米信用卡推荐',
-            more: false,
-            limit: 1,
-            list: [
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-              {headText: '随心存399天', desc: '银行产品本金保障'},
-            ]
-          },
-        ],
-        imgLists: [
-          'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
-          'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
-          'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
-          'https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg',
-        ],
-        newsInfo: {
-          title: '金融学堂',
-          more: false,
-          limit: 5,
-          list: [
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 54},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 55},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 56},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 57},
-            {url: '/news', headText: '百万医疗险*泰惠保', desc: '银行产品本金保障', cash: 11, unit: '元/月起', newsId: 58},
-          ]
-        },
         count: 0,
-        isLoading: false
+        navInfo: [],
+        isLoading: false,
+        licaiInfo: {},
+        comLists: [],
+        imgLists: [],
+        newsInfo: {},
       }
+    },
+    created() {
+      this.init();
     },
     methods: {
       onRefresh() {
@@ -139,6 +82,19 @@
           this.count++;
           console.log(this.count);
         }, 500);
+      },
+      init() {
+        var url = '../../static/data/getIndexAll.json';
+        this.$get(url).then(res => {
+          if(res.code == 200 && res.status == 'success'){
+            var resData = res.data;
+            this.navInfo = resData.navInfo;
+            this.licaiInfo = resData.licaiInfo;
+            this.comLists = resData.comLists;
+            this.imgLists = resData.imgLists;
+            this.newsInfo = resData.newsInfo;
+          }
+        })
       },
 
     },
